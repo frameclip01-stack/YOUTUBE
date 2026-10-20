@@ -1,0 +1,688 @@
+GOOGLE OMNI 1.1 FLASH — PROFESSIONAL PROMPT ENGINEERING OPERATING SYSTEM
+PART 1 — HUMAN IDEA TO OMNI PROMPT PIPELINE
+Converting an abstract human concept into a production-ready generative prompt for Google Omni 1.1 Flash (gemini-omni-1.1-flash) requires a deterministic prompt compilation pipeline1. Generative video models process natural language by mapping linguistic syntax directly to spatial-temporal representations1. Ambiguity, structural omissions, or syntax conflicts in the input prompt increase generation variance, leading to visual artifacts, temporal drift, or loss of creative intent1.
+The prompt compilation pipeline systematically converts brief human inputs into detailed production descriptions. Each execution stage refines the narrative concept into explicit control instructions optimized for the multimodal architecture of Gemini Omni 1.1 Flash1.
+Pipeline Stage Execution and Evidence Classification
+    1. Human Idea Ingestion: The system ingests raw, unstructured text inputs provided by the user (for example, "A huge black cat walks through an abandoned hospital at night").
+    2. Intent & Core Entity Understanding: The pipeline parses narrative goals, primary subjects, essential actions, and spatial settings.
+        ◦ Evidence Level: A — OFFICIAL. Google explicitly directs prompt construction to begin with clear scene descriptions, core subject definition, and primary environmental setup1.
+    3. Subject & Attribute Extraction: The system isolates the primary visual subject and defines its physical features, proportions, materials, scale, and surface textures relative to the scene.
+        ◦ Evidence Level: A — OFFICIAL. Google documentation specifies including detailed subject attributes to anchor visual fidelity1.
+    4. Action & Motion Vector Extraction: Verbs in natural language are expanded into physical motion vectors, directions, velocities, and mechanics.
+        ◦ Evidence Level: A — OFFICIAL. Official documentation mandates granular motion descriptions rather than vague movement terms1.
+    5. Environment & Spatial Framing: The engine defines spatial boundaries, architectural elements, background depth, atmospheric conditions, and floor planes.
+        ◦ Evidence Level: A — OFFICIAL. Google documentation establishes environmental details as core components of effective video prompts1.
+    6. Camera Dynamics & Composition Architecture: The pipeline sets framing, camera placement, tracking paths, focal parameters, and spatial composition.
+        ◦ Evidence Level: A — OFFICIAL. Google explicitly instructs users to specify camera movements, angles, and framing techniques for optimal visual control1.
+    7. Lighting & Visual Style Specification: Illumination sources, directionality, shadows, color palettes, and rendering medium parameters are established.
+        ◦ Evidence Level: A — OFFICIAL. Documented by Google as critical criteria for driving model photorealism and stylistic coherence1.
+    8. Native Audio Architecture: Acoustic soundscapes, physical sound effects (SFX), spoken dialogue, or musical score instructions are structured into the prompt payload.
+        ◦ Evidence Level: A — OFFICIAL. Omni 1.1 Flash natively processes and generates synchronized audio alongside video based on text descriptions1.
+    9. Temporal & Sequential Logic Check: Multi-action sequences are mapped to temporal markers across the shot duration to prevent visual overlapping.
+        ◦ Evidence Level: B — INFERRED. Derived from keyframe interpolation and scene extension documentation requiring logical temporal continuity1.
+    10. Model Capability & Parameter Validation: The prompt payload is validated against Omni 1.1 Flash limits, such as the maximum 10-second single-shot duration, supported aspect ratios of 16:9 and 9:16, and resolution settings (360p, 720p, 1080p, 4k)1.
+        ◦ Evidence Level: A — OFFICIAL. Parameters are defined in the official Google API schemas1.
+    11. Contradiction Detection & Complexity Pruning: The prompt is scanned for conflicting instructions (such as macro focus paired with wide landscape vistas) and non-descriptive buzzwords.
+        ◦ Evidence Level: B — INFERRED. Inferred from official prompting guides advising against vague, overlapping, or conflicting descriptors1.
+    12. Final Prompt Assembly & Production Output: Structural components are concatenated into a unified string formatted for ingestion by gemini-omni-1.1-flash1.
+        ◦ Evidence Level: A — OFFICIAL. Formatted according to official Google API text input conventions1.
+PART 2 — CREATIVE INTENT PRESERVATION
+Prompt expansion must function strictly as an additive refinement mechanism. It increases physical detail, optical specificity, and atmospheric consistency without modifying the user's core choices1.
+The Intent Preservation Framework
+To prevent creative drift during compilation, the prompt generator enforces strict immutability rules across seven creative dimensions:
+Creative Dimension
+Preservation Rule
+Authorized Expansion
+Unauthorized Drift (Prohibited)
+Main Subject
+Primary entity type and scale must remain fixed.
+Adding surface texture, anatomical details, micro-expressions.
+Changing the subject species, genre, or core identity.
+Core Action
+Primary physical behavior must be preserved.
+Specifying gait speed, stride mechanics, momentum, collision physics.
+Adding unrelated secondary actions that override the core behavior.
+Environment
+Primary spatial setting and location context are locked.
+Adding architectural decay, texture dust, surface reflections.
+Moving the scene to an unrequested geographic or temporal setting.
+Important Objects
+Key items specified by the user must remain present.
+Describing object patina, material properties, exact framing placement.
+Deleting specified items or replacing them with different props.
+Requested Style
+Visual rendering genre (e.g., photorealistic, animated) must be maintained.
+Specifying lens characteristics, sensor formats, rendering engines.
+Converting a requested photorealistic scene into stylized animation.
+Requested Mood
+Emotional or thematic tone must be reinforced.
+Refining light color temperature, shadows, contrast ratios, fog density.
+Inverting dark/suspenseful atmospheres into bright, comedic scenes.
+Requested Outcome
+End state or narrative resolution must match intent.
+Structuring smooth temporal transitions toward the desired ending state.
+Altering the sequence outcome or changing the narrative trajectory.
+Engineering Methodology vs. Official Google Guidance
+    • Official Google Guidance (Evidence Level: A): Google establishes that text-to-video performance relies on clear detail regarding scene setting, camera movement, lighting, and mood1. Google also confirms conversational editing capability via the Interactions API, which modifies targeted elements while preserving specified parts of the video1.
+    • Engineering System Architecture (Evidence Level: B): The explicit enforcement of an immutable "Intent Key Matrix" during prompt expansion is an engineering strategy derived from Google's context-window guidelines2. This guarantees zero prompt drift when converting brief inputs into comprehensive production descriptions.
+PART 3 — PROMPT ANATOMY AND STRUCTURAL SCHEMA
+Omni 1.1 Flash operates most reliably when input prompts follow a predictable, structured anatomy1. Structuring the prompt prevents multi-token semantic collision—a phenomenon where visual modifiers blend unintentionally across subjects and backgrounds.
+The standard structural formula maps as follows:
+Subject + Subject Attributes + Action + Environment + Context/Background + Camera & Composition + Lens & Focus + Lighting & Atmosphere + Style & Visual Treatment + Motion Mechanics + Audio Descriptors + Timing & Sequence.
+Consider an uncompiled text concept: "A huge black cat walks through an abandoned hospital at night." The compiled structural output expands this input into precise execution blocks:
+A panther-sized domestic black cat with sleek short fur and glowing yellow eyes prowls slowly forward along a littered, vinyl-tiled corridor of an abandoned hospital. The camera tracks backward smoothly at eye level, maintaining a medium close-up shot with shallow depth of field. Moonlight streams through cracked high windows, casting long geometric shadows across peeling wall paint and floating dust particles in the air. Photorealistic 4K cinematic footage with realistic physical lighting. The cat's heavy paws make quiet, rhythmic thuds on the damp floor, accompanied by a low, distant wind howling through open doorways.
+Component Breakdown and Evaluation Matrix
+1. Subject Definition
+    • Why It Exists: Anchors the focal point of the generative model's spatial attention mechanism1.
+    • When Included: Mandatory in all text prompts1.
+    • When Omitted: Never omitted in text-to-video1.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Using generic nouns without scale or weight (e.g., writing "a cat" instead of "a panther-sized black domestic cat").
+2. Subject Attributes
+    • Why It Exists: Prevents the model from defaulting to generic visual averages by defining textures, materials, colors, and condition1.
+    • When Included: When the subject has distinct visual traits essential to the scene1.
+    • When Omitted: When using exact reference images or reference videos that fully establish subject appearance1.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Overloading contradictory attributes (e.g., "glowing dark matte fur").
+3. Core Action
+    • Why It Exists: Drives the temporal transition across generated frames1.
+    • When Included: Mandatory for video generation1.
+    • When Omitted: Static shots, though Google notes even static scenes require environmental motion prompts to avoid frame freezing1.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Using passive verbs ("is walking") instead of active physical vectors ("prowls slowly forward, planting heavy paws").
+4. Environment & Spatial Context
+    • Why It Exists: Establishes ground planes, depth cues, spatial limits, and background elements1.
+    • When Included: Mandatory for spatial grounding1.
+    • When Omitted: When generating isolated assets on plain or void backgrounds1.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Omitting background scale, resulting in floating subjects or undefined horizons.
+5. Camera Framing & Movement
+    • Why It Exists: Controls viewer perspective, camera trajectory, and dynamic scale1.
+    • When Included: Whenever specific camera behavior (e.g., dolly, track, pan, orbit) is desired2.
+    • When Omitted: When allowing the model to determine dynamic framing automatically.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Combining opposing movements simultaneously (e.g., "pan left while orbiting right").
+6. Composition, Lens, & Depth of Field
+    • Why It Exists: Directs subject positioning (rule of thirds, center framing) and optical characteristics (shallow depth of field, macro lens, anamorphic flare)1.
+    • When Included: When professional cinematic framing or optical focus isolation is required1.
+    • When Omitted: Deep-focus broad landscape scenes where lens isolation is unnecessary.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Requesting physically impossible optical states (e.g., "ultra-wide 12mm macro close-up with zero distortion").
+7. Lighting & Atmospheric Conditions
+    • Why It Exists: Dictates volume, shading, contrast, exposure, color tone, and environmental density (fog, smoke, dust)1.
+    • When Included: Critical for establishing visual realism, mood, and time-of-day accuracy1.
+    • When Omitted: Flat graphic vector art styles where light physics are absent.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Declaring multiple sun positions or conflicting light temperatures without spatial direction.
+8. Visual Style & Medium Treatment
+    • Why It Exists: Establishes aesthetic boundaries (e.g., photorealistic film, 3D animation, archival documentary)1.
+    • When Included: Mandatory to prevent default aesthetic bias1.
+    • When Omitted: Never; style must always be specified1.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Stacking conflicting medium tags (e.g., "photorealistic 2D anime oil painting").
+9. Native Audio & Soundscapes
+    • Why It Exists: Guides Omni 1.1 Flash's native audio generation engine to produce matching ambient sounds, sound effects (SFX), and speech1.
+    • When Included: When synchronized audio output is enabled1.
+    • When Omitted: When generating silent video tracks or external post-production scores5.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Writing abstract audio descriptions that do not correspond to visual events in the shot.
+10. Timing, Temporal Progression, & Sequence
+    • Why It Exists: Defines event ordering across the clip's maximum 10-second native duration1.
+    • When Included: Multi-stage action shots or keyframe interpolation requests1.
+    • When Omitted: Single continuous action shots.
+    • Google Status: OFFICIAL (Level A)1.
+    • Mistakes to Avoid: Fitting too many distinct narrative beats into a single 10-second segment4.
+PART 4 — SPECIFICITY VS. COMPLEXITY DYNAMICS
+Prompts for Omni 1.1 Flash require precision without semantic bloat1. Model attention mechanisms possess finite capacity per generation step. Adding unnecessary filler descriptors degrades performance, increases generation failures, and wastes daily generation credits1.
+Achieving optimal prompt execution requires balancing low-detail inputs, high-precision descriptive prompts, and overloaded word stacks. Low-detail prompts like "a cat in a hospital" introduce high spatial ambiguity, resulting in unpredictable outputs1. Conversely, overloaded prompts containing dozens of adjective stacks introduce conflicting vectors, leading to rendering artifacts and lost credits1. High adherence is achieved through focused motion, clear subject definition, and coherent lighting syntax1.
+Prompt Efficiency Principles
+    1. Clear vs. Ambiguous Prompts:
+        ◦ Ambiguous: "A cat walks in a scary place." (Fails to define species, scale, architectural style, light source, or movement pace)1.
+        ◦ Clear: "A panther-sized black cat walks slowly down a dark, ruined hospital corridor illuminated by flickering moonlight streaming through broken window frames."1
+    2. Handling Complex Scenes & Multiple Subjects:
+        ◦ Stacking multiple primary subjects performing independent actions within a single text prompt causes subject-verb cross-contamination (e.g., the model mixes attributes between Subject A and Subject B)1.
+        ◦ Evidence-Based Mitigation: Limit text prompts to a maximum of two primary subjects per shot. For complex multi-subject interactions, leverage image-to-video reference inputs or the keyframe interpolation capability1.
+    3. Prompt Length and Token Efficiency:
+        ◦ Google Evidence: Google provides no official word-count limit for Omni 1.1 Flash text inputs1. However, official prompt samples demonstrate that conciseness paired with high descriptive density yields superior output quality1.
+        ◦ Engineering Rule (Level B): Maximize specific nouns and active verbs while removing redundant visual quality buzzwords.
+PART 5 — OMNI PROMPT-BUILDING ENGINE
+The Omni Prompt-Building Engine processes natural language queries by systematically verifying every scene dimension through an internal decision matrix prior to prompt assembly1.
+Scene Dimension
+Diagnostic Assessment Question
+Material Contribution Criteria
+Subject
+What primary entity must the viewer observe?
+Define species, scale, material texture, and key visual features.
+Action
+What physical movement vector occurs over time?
+Specify gait, speed, directionality, and interaction mechanics.
+Environment
+Where does it happen spatially?
+Establish architectural setting, floor plane, background depth cues.
+Camera
+How should the viewer experience the shot?
+Define shot size, angle, height, tracking trajectory, lens focus.
+Composition
+What visual arrangement should be emphasized?
+Balance foreground, midground, and background elements.
+Motion
+What secondary and environmental elements move?
+Detail atmospheric particle movement, wind effects, secondary objects.
+Lighting
+What visual lighting conditions are required?
+State light sources, directionality, color temperature, shadow density.
+Style
+What visual medium treatment is required?
+Enforce photorealistic film, documentary, or specific render engine.
+Audio
+What synchronized audio accompanies the clip?
+Define background ambient noise, physical impact SFX, voice directives.
+Timing
+What temporal progression occurs from 0 to 10 seconds?
+Map event ordering to prevent visual crowding in single shots.
+Constraints
+What core elements must remain visually locked?
+Establish visual invariants for character features and environmental assets.
+Every added descriptor must pass a single operational test: Does this word add distinct visual or spatial information that alters the pixel output in service of the user's creative intent? If the answer is no, the descriptor is pruned1.
+PART 6 — CAMERA DECISION ENGINE
+Camera control in Omni 1.1 Flash directly dictates spatial distortion, parallax effect, and viewer immersion1. The engine matches narrative requirements with precise camera terminology supported by official Google evidence2.
+Technical Camera Controls Matrix
+Shot Category
+Directing Syntax
+Optical Result
+Documentation Status
+Shot Size
+Extreme Close-up (ECU)
+Isolates micro-textures, eyes, or minute object details.
+OFFICIAL (Level A)
+[cite: 2]
+
+Close-up (CU)
+Focuses tightly on a character's face or key object.
+OFFICIAL (Level A)
+[cite: 2]
+
+Medium Shot (MS)
+Captures subject from waist up within immediate context.
+OFFICIAL (Level A)
+[cite: 2]
+
+Wide Shot (WS)
+Establishes full subject scale within the broader environment.
+OFFICIAL (Level A)
+[cite: 2]
+Camera Angle
+Eye-Level Shot
+Neutral perspective matching natural human vision.
+INFERRED (Level B)
+[cite: 1, 2]
+
+Low-Angle Shot
+Camera positioned below eye level looking up, exaggerating scale.
+OFFICIAL (Level A)
+[cite: 2]
+
+High-Angle Shot
+Camera positioned above subject looking down, diminishing scale.
+INFERRED (Level B)
+[cite: 1, 2]
+
+Bird's-Eye / Drone
+Overhead vertical view establishing spatial layouts.
+OFFICIAL (Level A)
+[cite: 1, 2]
+Camera Motion
+Tracking Shot
+Camera moves alongside subject maintaining fixed distance.
+OFFICIAL (Level A)
+[cite: 1, 2]
+
+Dolly-Zoom (Vertigo)
+Camera dollies forward while zooming out (optical perspective shift).
+OFFICIAL (Level A)
+[cite: 2]
+
+Orbital 360-Degree
+Camera rotates in a complete circle around a central frozen subject.
+OFFICIAL (Level A)
+[cite: 2]
+
+Whip-Pan
+Rapid horizontal pan creating motion blur transitions between subjects.
+OFFICIAL (Level A)
+[cite: 2]
+Lens & Focus
+Shallow Depth of Field
+Background blurred with soft bokeh; subject isolated in sharp focus.
+OFFICIAL (Level A)
+[cite: 2]
+
+Micro-Lens Effect
+High-magnification optical rendering with edge distortion.
+OFFICIAL (Level A)
+[cite: 2]
+PART 7 — MOTION ENGINE
+Motion generation requires explicit physical direction. In Omni 1.1 Flash, vague action statements like "the car drives fast" produce temporal shearing or static warping1. Prompts must define primary subject motion, environmental motion, camera motion, and secondary physical reactions1.
+Effective multi-layer motion requires structuring five distinct movement layers within the prompt:
+    1. Primary Subject Vector: Direct physical mechanics (e.g., "panther prowls forward along the central axis").
+    2. Physical Reaction Physics: Weight transfer and muscle dynamics (e.g., "weight shifts across shoulder blades, muscles flexing beneath fur").
+    3. Environmental Motion: Atmospheric dynamics (e.g., "dust motes swirl in air, torn curtains sway softly").
+    4. Secondary Entity Motion: Background movements (e.g., "water droplets drip periodically from ceiling beam").
+    5. Camera Motion Trajectory: Optical tracking (e.g., "camera tracks backward smoothly at matching speed").
+PART 8 — VISUAL STYLE ENGINE
+Visual style governs the rendering engine's color pipeline, surface reflectance models, and noise profiles1. Google explicitly supports multiple stylistic domains in Omni 1.1 Flash1.
+Evidence-Supported Style Definitions
+    • Photorealistic / Hyperrealistic: Real-world physics, natural sub-surface scattering, detailed surface textures, and optical camera artifacts1.
+    • Cinematic Film: Structured color grading, depth-of-field isolation, dynamic range lighting, and 35mm film grain qualities1.
+    • Documentary Style: Handheld or steady tracking shots, natural ambient light, flat neutral color grading, and archival realism1.
+    • Stylized Animation / Micro-Photography: Intricate glass-like silica shells, micro-textures, organic symmetries, and saturated color spectrums1.
+Unsupported Keywords Ban
+Prompts must avoid non-descriptive quality tags, including terms such as "Trending on ArtStation," "Octane Render 8K," "Masterpiece," "Award Winning Video," "Unreal Engine 5," and "Mind Blowing."
+Prompts must describe concrete physical parameters (such as "anamorphic lens flare, 35mm grain, volumetric fog") rather than relying on abstract quality tags1.
+PART 9 — LIGHTING AND ATMOSPHERIC ENGINE
+Lighting provides volume, spatial depth, and dramatic tone in generative video1. Omni 1.1 Flash documentation highlights lighting specification as a core requirement for photorealistic outputs1.
+Lighting Control Matrix
+Lighting Variable
+Directing Syntax
+Visual Impact
+Evidence Level
+Primary Source
+Moonlight through broken windows
+Soft cool-toned primary illumination with hard shadow casting.
+OFFICIAL (Level A)
+[cite: 2]
+
+Direct Golden Hour Sunlight
+Low-angle warm directional light producing elongated shadows.
+OFFICIAL (Level A)
+[cite: 2, 9]
+
+RGB Neon Accent Lighting
+High-contrast dual-tone colored highlights on metallic/skin surfaces.
+OFFICIAL (Level A)
+[cite: 1, 2]
+Quality & Spread
+Volumetric Shafts
+Visible light rays cutting through fog, dust, or smoke.
+INFERRED (Level B)
+[cite: 1, 2]
+
+Soft Diffused Ambient
+Shadowless, even illumination typical of overcast skies.
+INFERRED (Level B)
+[cite: 1, 2]
+Shadow Quality
+Sharp Geometric Shadows
+High-contrast dark silhouettes anchored to the floor plane.
+INFERRED (Level B)
+[cite: 1, 2]
+Atmospherics
+Floating Dust Motes
+Suspended particles catching light highlights, adding motion.
+OFFICIAL (Level A)
+[cite: 2]
+PART 10 — NATIVE AUDIO ENGINE
+Gemini Omni 1.1 Flash features native audio generation1. Unlike legacy video models that generate silent video requiring post-processed audio, Omni 1.1 Flash processes text, video, and audio natively in a unified multimodal architecture1.
+Audio Prompting Framework
+    1. Ambient Soundscapes: Background acoustic conditions (e.g., "low hum of fluorescent lights," "distant thunder echoed across the valley")1.
+    2. Synchronized Physical SFX: Sounds generated directly by visual actions (e.g., "heavy paw thuds on damp floorboards," "shattering glass impact")1.
+    3. Dialogue & Spoken Voice: Native voice generation integrated with character actions1.
+    4. Musical Scores: Narrative musical cues (e.g., "suspenseful low cello strings swelling gradually")1.
+The standardized audio prompt structure appends explicit sound directives following visual descriptions:
+
+
+
+[VISUAL PROMPT DESCRIPTIONS...] + "Audio: [AMBIENT NOISE], [SYNCHRONIZED SFX], [DIRECTED DIALOGUE OR MUSIC]."
+
+PART 11 — CHARACTER ENGINE
+Maintaining character visual consistency across generative video clips is achievable in Omni 1.1 Flash through native multimodal reference controls1.
+Reference Control
+Operational Mechanism
+Documentation Status
+Textual Feature Anchoring
+Detailed physical inventory (age, outfit, scars, exact color hex, structural features).
+OFFICIAL (Level A)
+[cite: 1, 2]
+Image Subject Reference
+Uploading reference images alongside text prompts to lock visual character traits.
+OFFICIAL (Level A)
+[cite: 1, 2]
+3-Second Video Reference
+Submitting up to 3 seconds of video reference to lock motion mechanics and facial structure.
+OFFICIAL (Level A)
+[cite: 2, 6, 7]
+Character Consistency Framework
+    1. Textual Feature Anchoring (Level A): Specify unchanging physical attributes (e.g., "A 40-year-old man wearing a worn beige linen suit with silver-rimmed glasses") across every sequential prompt1.
+    2. Image Subject Reference Input (Level A): Omni 1.1 Flash supports passing reference images with explicit subject mapping instructions1.
+    3. Multimodal 3-Second Video References (Level A): The model accepts up to 3 seconds of prior reference video to maintain exact visual appearance and character movement across scenes2.
+PART 12 — REFERENCE MEDIA DECISION ENGINE
+Omni 1.1 Flash provides multiple reference input capabilities. Choosing the correct mode depends on available assets and production requirements1.
+
+Production Goal
+Optimal Input Configuration
+Parameter / Endpoint Directives
+Pure Concept Generation
+Text-to-Video
+input: "<text_prompt>"
+[cite: 1]
+Animate Still Image
+Image-to-Video
+input: [image, text_prompt]
+[cite: 1]
+Smooth Orbit / Transition
+Keyframe Interpolation
+Supply first_frame and last_frame images2
+Extend Video Length
+Scene Extension
+Task extend using previous_interaction_id
+[cite: 2]
+Consistent Character/Style
+Video Reference Input
+Pass up to 3 seconds of reference video2
+Technical Reference Capability Overview
+    • Text-to-Video: Generates complete 10-second video and audio from pure text descriptions1.
+    • Image-to-Video: Transforms a still image into dynamic video using text to guide the motion trajectory1.
+    • First and Last Frame Interpolation: Accepts two keyframe images (first_frame and last_frame) and generates continuous, fluid video bridging the visual gap1.
+    • Scene Extension: Analyzes up to 10 seconds of prior context to generate seamless 10-second video continuations up to a cumulative length of 40 seconds2.
+    • Video Reference Input: References up to 3 seconds of reference video to map motion, style, or subject continuity2.
+PART 13 — CONTRADICTION DETECTOR AND SYSTEMIC SANITY CHECK
+Before dispatching a prompt to the API, the system runs an automated audit to eliminate internal contradictions that degrade generative quality1.
+Conflict Class
+Identified Contradiction Example
+Resolution Protocol
+Spatial / Camera
+"Extreme Close-Up macro shot of a wide cityscape"
+Strip macro framing; retain wide landscape shot size.
+Color Palette
+"Monochromatic black-and-white with vivid red neon accents"
+Enforce single aesthetic (either monochrome or duotone).
+Temporal / Speed
+"Ultra slow-motion high-speed rapid bullet movement"
+Standardize speed modifier to single motion rate.
+Lighting
+"Pitch black night scene with bright midday direct sunlight"
+Lock lighting source to match background time-of-day.
+Physical Motion
+"Character walks forward while moving backward"
+Remove opposing motion vector; lock single trajectory.
+Audio
+"Dead absolute silence accompanied by deafening thunder"
+Remove silence directive; specify isolated thunder SFX.
+The contradiction detector automatically strips conflicting secondary descriptors and enforces the primary intent defined by the user1.
+PART 14 — OMNI COMPATIBILITY MATRIX
+The prompt generator verifies that all parameters align strictly with official gemini-omni-1.1-flash API specifications1.
+Technical Parameter
+Officially Supported Values
+Status Level
+Model Identifier
+gemini-omni-1.1-flash
+OFFICIAL (Level A)
+[cite: 1, 4]
+Aspect Ratios
+16:9 (Default landscape), 9:16 (Portrait)
+OFFICIAL (Level A)
+[cite: 1, 5]
+Resolutions
+360p (Draft), 720p (Default), 1080p, 4k (Upscaled)
+OFFICIAL (Level A)
+[cite: 1, 2]
+Single Shot Duration
+Max 10 Seconds
+OFFICIAL (Level A)
+[cite: 5]
+Cumulative Extension Limit
+Max 40 Seconds (10-second increments)
+OFFICIAL (Level A)
+[cite: 2, 6]
+Extension Context Window
+Up to 10 Seconds Prior Context Analysis
+OFFICIAL (Level A)
+[cite: 2, 6]
+Keyframe Interpolation
+Supported (First Frame + Last Frame)
+OFFICIAL (Level A)
+[cite: 2, 6]
+Video Reference Input
+Up to 3 Seconds Reference Video
+OFFICIAL (Level A)
+[cite: 2, 6]
+Native Audio Output
+Speech, SFX, Music, Ambient Soundscapes
+OFFICIAL (Level A)
+[cite: 1, 5]
+Content Credentials
+SynthID Watermark Integrated
+OFFICIAL (Level A)
+[cite: 12]
+PART 15 — PROMPT QUALITY SCORING SYSTEM
+To evaluate prompt efficacy before execution, the prompt system calculates a numeric quality score ().
+
+Prompt Quality Scoring Rubric
+
+Metric Segment
+Evaluation Criteria
+Max Score
+Google vs. Engineering Classification
+Subject Clarity ()
+Subject identity, attributes, material texture, and scale are unambiguously defined.
+20
+ENGINEERING SPECIFICATION (Derived from Level A docs)1
+Action Precision ()
+Clear physical movement vectors, directionality, and velocity established.
+20
+ENGINEERING SPECIFICATION (Derived from Level A docs)1
+Camera Intention ()
+Specific shot size, camera angle, movement trajectory, and lens depth defined.
+15
+ENGINEERING SPECIFICATION (Derived from Level A docs)2
+Lighting Coherence ()
+Light sources, shadow characteristics, color temperature, and atmospherics specified.
+15
+ENGINEERING SPECIFICATION (Derived from Level A docs)1
+Audio Integration ()
+Ambient sounds, physical impact SFX, and voice directives configured.
+15
+ENGINEERING SPECIFICATION (Derived from Level A docs)1
+Structural Logic ()
+Zero visual contradictions, zero fluff, valid temporal sequence.
+15
+ENGINEERING SPECIFICATION (Engineering QA Metric)
+Prompts scoring below 85 points are routed back through the compilation engine for automatic refinement prior to API dispatch.
+PART 16 — FINAL PROMPT QA CHECKLIST
+Before consuming API generation credits, the host system performs a final validation sweep:
+    • [ ] Subject Identity: Is the primary subject defined with physical attributes and scale?1
+    • [ ] Action Direction: Is the motion expressed using active physical vectors?1
+    • [ ] Spatial Grounding: Is the environment bounded with clear floor planes and depth?1
+    • [ ] Camera Command: Are camera position, motion, and lens focus explicitly stated?2
+    • [ ] Lighting Parameters: Are light source, direction, and shadow quality specified?1
+    • [ ] Audio Directives: Are ambient sounds or SFX included for native audio generation?1
+    • [ ] Aspect Ratio Match: Is aspect_ratio set correctly to "16:9" or "9:16"?1
+    • [ ] Resolution Draft Check: Is the initial generation configured to 360p draft mode to optimize credit efficiency?2
+    • [ ] Contradiction-Free: Have conflicting physical, spatial, and optical directives been removed?
+    • [ ] Creative Fidelity: Is the core idea preserved without unauthorized drift?1
+PART 17 — CREDIT-SAVING ITERATION AND GENERATION STRATEGY
+Generating high-resolution AI video requires managing computational resources efficiently. Randomly editing entire prompts upon experiencing an imperfect generation wastes credits and makes it difficult to identify what fixed the issue2.
+A credit-efficient workflow follows five sequential operational phases:
+    1. Phase 1 (Draft Generation): Dispatch initial compiled prompt at 360p draft resolution, capturing speed up to 60% faster at one-third API credit cost2.
+    2. Phase 2 (Failure Analysis): Inspect low-resolution draft render to isolate single primary visual defect.
+    3. Phase 3 (Variable Isolation): Modify only the specific prompt parameter responsible for observed failure.
+    4. Phase 4 (Draft Re-verification): Re-render modified prompt at 360p to verify parameter fix.
+    5. Phase 5 (Production Render): Upscale verified prompt output directly to 1080p or 4K resolution2.
+Official Evidence vs. Engineering Strategy
+    • Official Google Control (Level A): Google officially documents 360p resolution draft mode, demonstrating that it renders up to 60% faster at one-third the cost of standard 720p generation2. Google also supports upscaling finalized drafts directly to 1080p or 4K2.
+    • Engineering Refinement Strategy (Level B): The single-variable iteration protocol (Draft 360p -> Isolate -> Fix Variable -> Verify 360p -> Final 4K Upscale) is a resource-management system designed to maximize daily credit yield2.
+PART 18 — FAILURE-DIAGNOSIS ENGINE
+When a generated clip fails to match prompt directives, the system executes a targeted diagnostic routine to correct the prompt without altering working elements1.
+
+Observed Defect
+Probable Root Cause
+Targeted Mitigation Procedure
+Documentation Status
+Camera ignores motion command
+Passive camera syntax or competing motion vectors1.
+Replace generic terms with explicit directional vectors2.
+OFFICIAL (Level A)
+[cite: 2]
+Subject morphing or spatial distortion
+Unanchored subject text; missing structural details1.
+Add physical features or pass reference image2.
+OFFICIAL (Level A)
+[cite: 1, 2]
+Environment drifting during movement
+Unclear spatial boundaries1.
+Define floor planes, walls, and depth cues1.
+INFERRED (Level B)
+[cite: 1, 2]
+Static frame / zero motion
+Lack of active environmental cues1.
+Add atmospheric motion descriptors (dust, wind)1.
+OFFICIAL (Level A)
+[cite: 1]
+Audio out of sync / missing
+Ambiguous audio timing or missing SFX descriptors1.
+Structure audio tags explicitly at end of prompt1.
+OFFICIAL (Level A)
+[cite: 1]
+PART 19 — SINGLE-VARIABLE REFINEMENT RULE
+The prompt generator enforces strict variable isolation during prompt editing cycles1.
+The refinement protocol adheres to a strict sequence: Observed Failure leads to Variable Identification, followed by Modifying Variable Only, Preserving Working Instructions, Regenerating at 360p Draft, and Comparing Renders.
+Execution Protocol
+If an initial generation successfully renders lighting, environment, and style, but fails on camera tracking:
+    1. PROHIBITED: Rewriting the entire prompt or introducing new stylistic descriptors.
+    2. REQUIRED: Preserving 100% of the subject, environment, lighting, audio, and style text. Modify only the camera motion clause (e.g., changing "camera follows cat" to "camera tracks backward continuously at eye level, maintaining medium close-up framing")1.
+PART 20 — VERTICAL VIDEO AND YOUTUBE SHORTS APPLICATION
+Generating high-impact portrait video for mobile platforms requires explicit structural framing adapted for the 9:16 aspect ratio1.
+Vertical video composition relies on a three-tier spatial grid structure:
+    1. Upper Third Grid: Atmospheric clearance and vertical architectural elements.
+    2. Middle Third Grid: Primary subject framing and focal action vectors.
+    3. Lower Third Grid: Foreground floor plane and Z-axis depth leading lines.
+Vertical Video Technical Guidelines
+    1. Aspect Ratio Parameter (Level A): Configure aspect_ratio: "9:16" explicitly in the request schema1.
+    2. Vertical Action Framing (Level B): Portrait framing has limited horizontal clearance. Prompts must direct motion along vertical or Z-axis depth trajectories (e.g., moving directly toward or away from the camera, or climbing/descending) rather than wide horizontal pans1.
+    3. Subject Centering (Level B): Keep primary subjects within the vertical center-third grid to prevent limb clipping across mobile display variations8.
+Disclaimer: System prompt engineering optimizes image structure and technical rendering fidelity. It does not predict or guarantee social media engagement, viral performance, or algorithmic distribution.
+PART 21 — MASTER DECISION TREE
+The complete operational flow executed by the prompt compilation engine is structured through a step-by-step hierarchical process:
+    1. Input Ingestion: Ingest raw human text concept.
+    2. Intent Parsing: Parse core intent across subject, action, environment, and requested visual style1.
+    3. Reference Verification: Determine input modality (Text-to-Video, Image-to-Video, Keyframe Interpolation, Video Reference Input, or Scene Extension)1.
+    4. Structural Compilation: Build individual prompt execution blocks for Subject Attributes, Action Vectors, Environment Framing, Camera Mechanics, Lighting Atmosphere, and Native Audio1.
+    5. Systemic Audit: Run Contradiction Detector and Omni Capability Matrix checks (aspect_ratio, duration limits, resolution config)1.
+    6. Quality Scoring: Evaluate prompt against Rubric ()1.
+    7. Draft Dispatch: Dispatch formatted request payload configured for 360p draft mode2.
+    8. Iterative Refinement: Diagnose defects, apply Single-Variable Refinement, and upscale final output to 1080p or 4K1.
+PART 22 — MASTER PROMPT TEMPLATE
+The reusable prompt architecture for Google Omni 1.1 Flash structures parameters clearly across all functional categories1.
+
+
+
+[SCENE TYPE & STYLE]: Photorealistic 4K cinematic video, [GENRE] aesthetic.
+[PRIMARY SUBJECT]: [Detailed subject noun] with [TEXTURE/MATERIAL/COLOR ATTRIBUTES].
+[ACTION & MOTION]: [Active motion vector describing movement trajectory, speed, and body mechanics].
+[ENVIRONMENT & SPATIAL]: Set in [Detailed location description] featuring [SURFACE TEXTURES, GROUND PLANE, DEPTH CUES].
+[CAMERA & COMPOSITION]: [Shot size] shot, camera [Movement trajectory: tracking/dolly/orbit] at [Angle/Height]. [Lens/Depth of field focus].
+[LIGHTING & ATMOSPHERE]: Illuminated by [Light source & direction], creating [Shadow characteristics]. Atmospheric [Dust/Fog/Smoke conditions].
+[NATIVE AUDIO]: Synchronized audio featuring [AMBIENT SOUNDSCAPE], [PHYSICAL IMPACT SFX], and [DIRECTED DIALOGUE/VOICE].
+[TEMPORAL SEQUENCE]: [Second 0-5 development] transitioning smoothly to [Second 5-10 conclusion]. Continuous shot, no jump cuts.
+
+PART 23 — FINAL AI BEHAVIOR RULES
+Any downstream AI agent configured as an Omni 1.1 Flash prompt generator must strictly follow these core operational directives:
+    1. Preserve User Intent: Never alter the user's primary subject, core action, setting, or requested style during expansion1.
+    2. Enforce Absolute Specificity: Replace generic adjectives with descriptive physical, optical, and spatial terms1.
+    3. Strict Omni Model Adherence: Limit instructions to documented Omni 1.1 Flash capabilities (gemini-omni-1.1-flash). Do not import unverified parameters from external models1.
+    4. Eliminate Quality Buzzwords: Strip unsupported buzzwords ("ultra HD," "masterpiece," "viral hit")9.
+    5. Prevent Visual Contradictions: Audit prompts to ensure physical, spatial, optical, and color directives are internally consistent8.
+    6. Default to Credit Efficiency: Structure workflows around 360p draft generation before upscaling to final 1080p or 4K renders2.
+    7. Integrate Native Audio: Include synchronized soundscape, SFX, and voice directives for video generation tasks1.
+    8. Acknowledge Documentation Limits: Explicitly classify non-documented techniques as engineering inferences or unsupported methods.
+PART 24 — MASTER EVIDENCE TABLE
+
+Prompt Engineering Rule
+Omni 1.1 Flash Evidence
+Evidence Level
+Practical Instruction
+Source
+Aspect Ratio Selection
+Native API support for "16:9" and "9:16" aspect ratios.
+HIGH (Official)
+Pass aspect_ratio: "9:16" in JSON response format for vertical video.
+Google AI Docs1
+Resolution Drafting
+360p draft mode renders 60% faster at 1/3 cost.
+HIGH (Official)
+Always prototype prompts at 360p before triggering 4K upscaling.
+Google Developer Blog2
+4K Resolution Output
+Upscaling supported up to 1080p and native 4K.
+HIGH (Official)
+Specify resolution: "4k" in response_format for final production renders.
+Google Developer Blog2
+Scene Extension Limit
+Extends videos in 10s increments up to 40s total using 10s context.
+HIGH (Official)
+Pass previous_interaction_id to extend clips up to 40 seconds.
+Google Developer Blog2
+Keyframe Interpolation
+Smooth interpolation between specified first and last frames.
+HIGH (Official)
+Supply array of 2 images (first_frame, last_frame) to force exact transitions.
+Google Developer Blog2
+Video References
+Supports referencing up to 3 seconds of prior video reference.
+HIGH (Official)
+Upload 3-second video clips to maintain subject and motion consistency.
+Google Developer Blog2
+Camera & Lighting Guidance
+Official prompting guide mandates scene, camera, lighting, mood details.
+HIGH (Official)
+Always include explicit camera movement, light source, and color temperature.
+Google AI Docs1
+Image-to-Video Motion
+Vague prompts fail; explicit motion descriptions required.
+HIGH (Official)
+Write detailed physical vector paths instead of generic "make it move" text.
+Google AI Docs1
+Native Audio Generation
+Multimodal unified video and audio generation from text.
+HIGH (Official)
+Include explicit acoustic soundscape and SFX descriptors in text prompt.
+Google AI Docs1
+Single-Variable Refinement
+Iterative single-variable adjustments reduce wasted credits.
+MEDIUM (Inferred)
+Change only one prompt clause at a time when debugging failed draft renders.
+Derived from Google Docs1
+9:16 Vertical Grid Framing
+Concentrating primary action in middle-third grid avoids clipping.
+MEDIUM (Inferred)
+Place primary motion along depth (Z-axis) vectors for vertical video.
+Derived from Google Docs1
+Negative Prompting Syntax
+No official --no or negative prompt syntax documented for Omni 1.1.
+LOW (Unsupported)
+Avoid using negative prompt parameters; describe desired elements positively.
+Product Verification1
+PART 25 — WHAT THE FUTURE GEMINI MUST NEVER CLAIM
+To maintain technical accuracy and prevent credit waste, prompt generation systems must avoid the following unverified claims and practices:
+    1. Guaranteed Virality or Engagement: Never claim that specific prompt structures ensure YouTube Shorts views, retention, or financial monetization.
+    2. Unverified Negative Prompting: Never claim that Omni 1.1 Flash supports standard negative prompt parameters (such as --no blur or negative_prompt: "") unless explicitly verified in the API documentation1.
+    3. "Magic" Quality Buzzwords: Never claim that appending words like "trending on ArtStation," "photorealistic 8K," or "masterpiece" guarantees higher rendering resolution9.
+    4. Importing Unverified Veo Controls: Never assume that parameters unique to other Google models (such as Veo 2, Veo 3, or Imagen 4) automatically apply to Omni 1.1 Flash without official documentation12.
+    5. Arbitrary Word Count Restrictions: Never enforce hard word-count limits (e.g., "prompts must be under 50 words") since Google does not document word caps for Omni 1.1 Flash1.
+    6. Guaranteed 100% Character Identity Preservation: Never promise perfect frame-to-frame character identity retention from text alone without referencing image or video inputs2.
+    7. Fabricated Documentation: Never cite non-existent Google technical guides or claim official backing for custom engineering heuristics.
+Works cited
+    1. Generate and edit videos with Gemini Omni Flash | Gemini API, https://ai.google.dev/gemini-api/docs/omni
+    2. Gemini Omni 1.1 Flash lets you build with more control - Google Blog, https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/
+    3. Models | Gemini API - Google AI for Developers, https://ai.google.dev/gemini-api/docs/models
+    4. Release notes | Gemini API - Google AI for Developers, https://ai.google.dev/gemini-api/docs/changelog
+    5. Gemini Omni Flash Preview | Gemini Enterprise Agent Platform, https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview
+    6. Google Releases Gemini Omni 1.1 Flash With Enhanced ... - HyperAI, https://hyper.ai/en/stories/d06021b7ade0362f40f0ac19be811d8d
+    7. Gemini Omni 1.1 Flash lands with 4K output and 40-second scenes, https://daily.dev/posts/gemini-omni-1-1-flash-lands-with-4k-output-and-40-second-scenes-fsktsmpia
+    8. I keep getting Policy violation error when using Omni video, https://discuss.ai.google.dev/t/i-keep-getting-policy-violation-error-when-using-omni-video-generation-model/167913
+    9. Generate images using Imagen | Gemini API, https://ai.google.dev/gemini-api/docs/imagen
+    10. Audio understanding - Interactions API | Google AI for Developers, https://ai.google.dev/gemini-api/docs/audio
+    11. Text-to-speech generation (TTS) | Gemini API, https://ai.google.dev/gemini-api/docs/speech-generation
+    12. Google Gemini Omni Flash Launches Conversational Video, https://dev.to/alifar/google-gemini-omni-flash-launches-conversational-video-creation-and-editing-tools-25hk
+    13. Start building with Nano Banana 2 Lite and Gemini Omni Flash, https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/
+    14. Generate videos with Veo 3.1 in Gemini API | Google AI for Developers, https://ai.google.dev/gemini-api/docs/veo
